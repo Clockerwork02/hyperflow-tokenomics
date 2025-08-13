@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Token Economics - HyperFlow Protocol</title>
-    <!-- New Domain: 1755085497990 -->
+    <title>HyperFlow Protocol - Token Economics</title>
+    <!-- Updated: 1755087982891 -->
     <style>
         * {
             margin: 0;
@@ -31,26 +31,6 @@
             margin-bottom: 30px;
         }
         
-        .back-link {
-            display: inline-block;
-            background: linear-gradient(135deg, #2dd4bf 0%, #14b8a6 100%);
-            color: #ffffff;
-            padding: 12px 20px;
-            border-radius: 8px;
-            text-decoration: none;
-            margin-bottom: 20px;
-            transition: all 0.3s ease;
-            font-weight: 500;
-            font-size: 0.9rem;
-            box-shadow: 0 4px 15px rgba(45, 212, 191, 0.3);
-        }
-        
-        .back-link:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(45, 212, 191, 0.4);
-            background: linear-gradient(135deg, #14b8a6 0%, #0d9488 100%);
-        }
-        
         h1 {
             background: linear-gradient(135deg, #2dd4bf 0%, #14b8a6 50%, #0d9488 100%);
             -webkit-background-clip: text;
@@ -59,25 +39,78 @@
             font-size: 2.5rem;
             font-weight: 800;
             margin-bottom: 15px;
-            text-align: center;
             line-height: 1.2;
         }
         
         .subtitle {
             color: #94a3b8;
-            font-size: 1rem;
-            margin-bottom: 25px;
-            text-align: center;
-            line-height: 1.4;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        
+        .back-link {
+            display: inline-block;
+            background: linear-gradient(135deg, rgba(45, 212, 191, 0.1) 0%, rgba(20, 184, 166, 0.05) 100%);
+            border: 1px solid rgba(45, 212, 191, 0.3);
+            border-radius: 8px;
+            padding: 12px 20px;
+            color: #2dd4bf;
+            text-decoration: none;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+        }
+        
+        .back-link:hover {
+            background: linear-gradient(135deg, rgba(45, 212, 191, 0.2) 0%, rgba(20, 184, 166, 0.1) 100%);
+            transform: translateY(-2px);
         }
         
         .content {
             background: rgba(30, 41, 59, 0.9);
             border: 1px solid rgba(45, 212, 191, 0.15);
             border-radius: 16px;
-            padding: 25px 20px;
+            padding: 30px 25px;
             backdrop-filter: blur(20px);
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            margin-bottom: 30px;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .stat-card {
+            background: linear-gradient(135deg, rgba(45, 212, 191, 0.1) 0%, rgba(20, 184, 166, 0.05) 100%);
+            border: 1px solid rgba(45, 212, 191, 0.2);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(45, 212, 191, 0.2);
+        }
+        
+        .stat-value {
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #2dd4bf 0%, #14b8a6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
+            line-height: 1.2;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: #94a3b8;
+            font-weight: 500;
         }
         
         h2 {
@@ -87,11 +120,6 @@
             margin: 30px 0 20px 0;
             border-bottom: 2px solid rgba(45, 212, 191, 0.3);
             padding-bottom: 8px;
-            line-height: 1.3;
-        }
-        
-        h2:first-child {
-            margin-top: 0;
         }
         
         h3 {
@@ -99,20 +127,18 @@
             font-size: 1.4rem;
             font-weight: 600;
             margin: 25px 0 15px 0;
-            line-height: 1.3;
         }
         
         h4 {
             color: #0d9488;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             font-weight: 600;
             margin: 20px 0 12px 0;
-            line-height: 1.3;
         }
         
         p {
             color: #cbd5e1;
-            margin-bottom: 18px;
+            margin-bottom: 15px;
             font-size: 1rem;
             line-height: 1.6;
         }
@@ -125,7 +151,7 @@
             color: #cbd5e1;
             margin-bottom: 10px;
             font-size: 1rem;
-            line-height: 1.5;
+            line-height: 1.6;
         }
         
         strong {
@@ -133,55 +159,7 @@
             font-weight: 600;
         }
         
-        .table-container {
-            overflow-x: auto;
-            border-radius: 12px;
-            border: 1px solid rgba(45, 212, 191, 0.25);
-            margin: 25px 0;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-            -webkit-overflow-scrolling: touch;
-        }
-        
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            background: rgba(15, 23, 42, 0.95);
-            min-width: 600px;
-        }
-        
-        th {
-            background: linear-gradient(135deg, #2dd4bf 0%, #14b8a6 100%);
-            color: #ffffff;
-            padding: 14px 12px;
-            text-align: left;
-            font-weight: 600;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 0.3px;
-            white-space: nowrap;
-        }
-        
-        td {
-            padding: 12px;
-            border-bottom: 1px solid rgba(45, 212, 191, 0.1);
-            color: #e2e8f0;
-            font-size: 0.9rem;
-            line-height: 1.4;
-        }
-        
-        tr:last-child td {
-            border-bottom: none;
-        }
-        
-        tr:hover {
-            background: rgba(45, 212, 191, 0.05);
-        }
-        
-        tr:nth-child(even) {
-            background: rgba(30, 41, 59, 0.4);
-        }
-        
-        .highlight-section {
+        .highlight-box {
             background: linear-gradient(135deg, rgba(45, 212, 191, 0.08) 0%, rgba(20, 184, 166, 0.05) 100%);
             border: 1px solid rgba(45, 212, 191, 0.2);
             border-radius: 12px;
@@ -190,7 +168,7 @@
             position: relative;
         }
         
-        .highlight-section::before {
+        .highlight-box::before {
             content: '';
             position: absolute;
             top: 0;
@@ -201,46 +179,88 @@
             border-radius: 12px 12px 0 0;
         }
         
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
+        .distribution-table {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(45, 212, 191, 0.2);
+            border-radius: 12px;
+            overflow: hidden;
             margin: 20px 0;
         }
         
-        .stat-item {
-            background: linear-gradient(135deg, rgba(45, 212, 191, 0.1) 0%, rgba(20, 184, 166, 0.05) 100%);
+        .distribution-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .distribution-table th {
+            background: linear-gradient(135deg, rgba(45, 212, 191, 0.2) 0%, rgba(20, 184, 166, 0.1) 100%);
+            color: #2dd4bf;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            border-bottom: 1px solid rgba(45, 212, 191, 0.2);
+        }
+        
+        .distribution-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid rgba(45, 212, 191, 0.1);
+            color: #cbd5e1;
+        }
+        
+        .distribution-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .utility-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+        
+        .utility-card {
+            background: rgba(15, 23, 42, 0.6);
             border: 1px solid rgba(45, 212, 191, 0.2);
             border-radius: 12px;
-            padding: 18px 12px;
-            text-align: center;
+            padding: 20px;
             transition: all 0.3s ease;
         }
         
-        .stat-item:hover {
+        .utility-card:hover {
             transform: translateY(-2px);
             box-shadow: 0 6px 20px rgba(45, 212, 191, 0.15);
         }
         
-        .stat-value {
-            display: block;
-            font-size: 1.6rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, #2dd4bf 0%, #14b8a6 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            margin-bottom: 6px;
-            line-height: 1.2;
+        .utility-card h4 {
+            margin-top: 0;
+            margin-bottom: 12px;
         }
         
-        .stat-label {
-            font-size: 0.8rem;
+        .revenue-breakdown {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .revenue-item {
+            background: linear-gradient(135deg, rgba(45, 212, 191, 0.05) 0%, rgba(20, 184, 166, 0.02) 100%);
+            border: 1px solid rgba(45, 212, 191, 0.15);
+            border-radius: 10px;
+            padding: 18px;
+            text-align: center;
+        }
+        
+        .revenue-value {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #2dd4bf;
+            margin-bottom: 5px;
+        }
+        
+        .revenue-desc {
+            font-size: 0.85rem;
             color: #94a3b8;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            font-weight: 500;
-            line-height: 1.2;
         }
         
         a {
@@ -257,220 +277,267 @@
         @media (max-width: 768px) {
             .container { padding: 15px 10px; }
             .content { padding: 20px 15px; border-radius: 12px; }
-            h1 { font-size: 2rem; line-height: 1.2; }
+            h1 { font-size: 2rem; }
+            .subtitle { font-size: 1rem; }
             h2 { font-size: 1.5rem; margin: 25px 0 15px 0; }
             h3 { font-size: 1.2rem; margin: 20px 0 12px 0; }
-            .table-container { margin: 15px -5px; border-radius: 8px; }
-            table { font-size: 0.8rem; min-width: 500px; }
-            th, td { padding: 8px 6px; }
-            th { font-size: 0.75rem; padding: 10px 8px; }
-            .stats-grid { grid-template-columns: 1fr; gap: 12px; margin: 15px 0; }
-            .stat-value { font-size: 1.4rem; }
-            .stat-label { font-size: 0.75rem; }
-            .stat-item { padding: 15px 10px; }
-            .highlight-section { padding: 15px; margin: 15px 0; }
+            .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; }
+            .utility-grid { grid-template-columns: 1fr; gap: 15px; }
+            .revenue-breakdown { grid-template-columns: 1fr; gap: 12px; }
+            .stat-value { font-size: 1.5rem; }
+            .distribution-table th, .distribution-table td { padding: 10px; font-size: 0.9rem; }
             p, li { font-size: 0.95rem; }
-            .back-link { padding: 10px 16px; font-size: 0.85rem; }
         }
         
         @media (max-width: 480px) {
             h1 { font-size: 1.8rem; }
-            .subtitle { font-size: 0.9rem; }
-            .stats-grid { gap: 10px; }
-            .stat-value { font-size: 1.2rem; }
-            .table-container { margin: 15px -10px; }
-            table { min-width: 450px; }
-            th, td { padding: 6px 4px; }
+            .stats-grid { grid-template-columns: 1fr; }
+            .distribution-table th, .distribution-table td { padding: 8px; font-size: 0.85rem; }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <a href="https://hyperflowprotocol.github.io" class="back-link">← Back to Main Whitepaper</a>
+            <a href="https://hyperflowprotocol.github.io" class="back-link">← Back to Main</a>
             <h1>Token Economics</h1>
-            <div class="subtitle">HyperFlow Protocol - Advanced DeFi Infrastructure</div>
+            <div class="subtitle">FLOW Token Distribution & Utility Model</div>
+        </div>
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-value">1B</div>
+                <div class="stat-label">Total Supply</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">50%</div>
+                <div class="stat-label">Revenue Share</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">40%</div>
+                <div class="stat-label">Public Sale</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">Fixed</div>
+                <div class="stat-label">Supply Cap</div>
+            </div>
         </div>
         
         <div class="content">
+            <h2>Token Overview</h2>
             
-<h2>Token Economics Analysis</h2>
-
-<div class="stats-grid">
-    <div class="stat-item">
-        <span class="stat-value">1B</span>
-        <span class="stat-label">Total Supply</span>
-    </div>
-    <div class="stat-item">
-        <span class="stat-value">FLOW</span>
-        <span class="stat-label">Token Symbol</span>
-    </div>
-    <div class="stat-item">
-        <span class="stat-value">50%</span>
-        <span class="stat-label">Revenue Share</span>
-    </div>
-    <div class="stat-item">
-        <span class="stat-value">Fixed</span>
-        <span class="stat-label">No Inflation</span>
-    </div>
-</div>
-
-<h3>Token Distribution</h3>
-
-<div class="table-container">
-    <table>
-        <thead>
-            <tr>
-                <th>Allocation</th>
-                <th>Percentage</th>
-                <th>Amount</th>
-                <th>Vesting Period</th>
-                <th>Purpose</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><strong>Public Sale</strong></td>
-                <td>5%</td>
-                <td>50,000,000 FLOW</td>
-                <td>Immediate</td>
-                <td>Community distribution</td>
-            </tr>
-            <tr>
-                <td><strong>Development</strong></td>
-                <td>25%</td>
-                <td>250,000,000 FLOW</td>
-                <td>4-year linear</td>
-                <td>Protocol development</td>
-            </tr>
-            <tr>
-                <td><strong>Team & Advisors</strong></td>
-                <td>10%</td>
-                <td>100,000,000 FLOW</td>
-                <td>2-year cliff, 4-year linear</td>
-                <td>Team compensation</td>
-            </tr>
-            <tr>
-                <td><strong>Ecosystem Fund</strong></td>
-                <td>15%</td>
-                <td>150,000,000 FLOW</td>
-                <td>6-month cliff, 3-year linear</td>
-                <td>Partnerships & growth</td>
-            </tr>
-            <tr>
-                <td><strong>Liquidity Mining</strong></td>
-                <td>20%</td>
-                <td>200,000,000 FLOW</td>
-                <td>12-month emission</td>
-                <td>Bootstrap liquidity</td>
-            </tr>
-            <tr>
-                <td><strong>Community Airdrop</strong></td>
-                <td>15%</td>
-                <td>150,000,000 FLOW</td>
-                <td>Immediate</td>
-                <td>Early adopters</td>
-            </tr>
-            <tr>
-                <td><strong>Treasury Reserve</strong></td>
-                <td>10%</td>
-                <td>100,000,000 FLOW</td>
-                <td>Governance-controlled</td>
-                <td>Emergency fund</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-
-<h3>Revenue Model</h3>
-
-<div class="highlight-section">
-    <h4>Revenue Streams</h4>
-    <ul>
-        <li><strong>Vault Performance Fees:</strong> 10-15% of generated yield</li>
-        <li><strong>Withdrawal Fees:</strong> 0.1-0.5% on withdrawals</li>
-        <li><strong>Premium Features:</strong> Subscription-based advanced tools</li>
-        <li><strong>Partner Protocol Rewards:</strong> Revenue sharing agreements</li>
-    </ul>
-</div>
-
-<div class="table-container">
-    <table>
-        <thead>
-            <tr>
-                <th>TVL Scenario</th>
-                <th>Annual Revenue</th>
-                <th>Token Holder Share (50%)</th>
-                <th>Yield per Token</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><strong>$1M TVL</strong></td>
-                <td>$50,000 - $100,000</td>
-                <td>$25,000 - $50,000</td>
-                <td>0.0025% - 0.005%</td>
-            </tr>
-            <tr>
-                <td><strong>$10M TVL</strong></td>
-                <td>$500,000 - $1M</td>
-                <td>$250,000 - $500,000</td>
-                <td>0.025% - 0.05%</td>
-            </tr>
-            <tr>
-                <td><strong>$100M TVL</strong></td>
-                <td>$5M - $10M</td>
-                <td>$2.5M - $5M</td>
-                <td>0.25% - 0.5%</td>
-            </tr>
-            <tr>
-                <td><strong>$1B TVL</strong></td>
-                <td>$50M - $100M</td>
-                <td>$25M - $50M</td>
-                <td>2.5% - 5%</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-
-<h3>Token Utility Framework</h3>
-
-<div class="stats-grid">
-    <div class="stat-item">
-        <span class="stat-value">Governance</span>
-        <span class="stat-label">Protocol Decisions</span>
-    </div>
-    <div class="stat-item">
-        <span class="stat-value">Revenue</span>
-        <span class="stat-label">Sharing Rights</span>
-    </div>
-    <div class="stat-item">
-        <span class="stat-value">Fee</span>
-        <span class="stat-label">Discounts</span>
-    </div>
-    <div class="stat-item">
-        <span class="stat-value">Priority</span>
-        <span class="stat-label">Access</span>
-    </div>
-</div>
-
-<h4>Utility Mechanisms</h4>
-<ul>
-    <li><strong>Staking Rewards:</strong> Share of protocol revenue distributed to stakers</li>
-    <li><strong>Governance Voting:</strong> Protocol parameter and upgrade decisions</li>
-    <li><strong>Fee Reduction:</strong> Lower fees for vault deposits/withdrawals</li>
-    <li><strong>Premium Access:</strong> Advanced analytics and early feature access</li>
-</ul>
-
-<div style="text-align: center; margin-top: 40px;">
-    <p><strong>For complete protocol details: <a href="https://hyperflowprotocol.github.io">HyperFlow Protocol Whitepaper</a></strong></p>
-</div>
-
+            <p>The FLOW token serves as the cornerstone of the HyperFlow Protocol ecosystem, providing governance rights, revenue sharing, and access to advanced DeFi infrastructure. With a fixed supply of 1 billion tokens and community-focused distribution, FLOW establishes sustainable value creation for all stakeholders.</p>
+            
+            <div class="highlight-box">
+                <h3>Key Token Benefits</h3>
+                <ul>
+                    <li><strong>Revenue Sharing:</strong> 50% of all protocol fees distributed to token holders</li>
+                    <li><strong>Governance Power:</strong> Community voting on protocol parameters and upgrades</li>
+                    <li><strong>Fee Discounts:</strong> Reduced costs across all platform services</li>
+                    <li><strong>Yield Enhancement:</strong> Boosted APY for FLOW holders in select vaults</li>
+                </ul>
+            </div>
+            
+            <h2>Token Distribution</h2>
+            
+            <div class="distribution-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Allocation</th>
+                            <th>Tokens</th>
+                            <th>Percentage</th>
+                            <th>Vesting</th>
+                            <th>Purpose</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Public Sale</strong></td>
+                            <td>400,000,000</td>
+                            <td>40%</td>
+                            <td>No vesting</td>
+                            <td>Community ownership and liquidity</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Development Fund</strong></td>
+                            <td>250,000,000</td>
+                            <td>25%</td>
+                            <td>4-year linear</td>
+                            <td>Platform development and security</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Community Rewards</strong></td>
+                            <td>200,000,000</td>
+                            <td>20%</td>
+                            <td>Performance-based</td>
+                            <td>Yield farming and user incentives</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Team</strong></td>
+                            <td>100,000,000</td>
+                            <td>10%</td>
+                            <td>2-year cliff, 4-year vest</td>
+                            <td>Core team alignment</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Partnerships</strong></td>
+                            <td>50,000,000</td>
+                            <td>5%</td>
+                            <td>Milestone-based</td>
+                            <td>Strategic integrations</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <h2>Revenue Model & Distribution</h2>
+            
+            <h3>Protocol Revenue Streams</h3>
+            <div class="revenue-breakdown">
+                <div class="revenue-item">
+                    <div class="revenue-value">10%</div>
+                    <div class="revenue-desc">Vault Performance Fees</div>
+                </div>
+                <div class="revenue-item">
+                    <div class="revenue-value">0.1%</div>
+                    <div class="revenue-desc">Bridge Transaction Fees</div>
+                </div>
+                <div class="revenue-item">
+                    <div class="revenue-value">0.05%</div>
+                    <div class="revenue-desc">Cross-Protocol Trading</div>
+                </div>
+                <div class="revenue-item">
+                    <div class="revenue-value">Premium</div>
+                    <div class="revenue-desc">Advanced Analytics</div>
+                </div>
+            </div>
+            
+            <h3>Revenue Distribution</h3>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value">50%</div>
+                    <div class="stat-label">Token Holders</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">30%</div>
+                    <div class="stat-label">Development</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">20%</div>
+                    <div class="stat-label">Treasury</div>
+                </div>
+            </div>
+            
+            <div class="highlight-box">
+                <h4>Automated Distribution</h4>
+                <p>Revenue sharing operates through smart contracts with automated distribution every 24 hours. Token holders earn rewards proportional to their staked FLOW tokens, creating sustainable passive income streams.</p>
+            </div>
+            
+            <h2>Token Utility Mechanisms</h2>
+            
+            <div class="utility-grid">
+                <div class="utility-card">
+                    <h4>Governance Voting</h4>
+                    <p>FLOW holders participate in protocol governance with 1 token = 1 vote. Decisions include fee adjustments, new strategy approvals, and platform upgrades.</p>
+                </div>
+                
+                <div class="utility-card">
+                    <h4>Staking Rewards</h4>
+                    <p>Stake FLOW tokens to earn 50% of protocol revenue. Rewards automatically compound and can be claimed anytime without penalties.</p>
+                </div>
+                
+                <div class="utility-card">
+                    <h4>Fee Discounts</h4>
+                    <p>FLOW holders receive reduced fees across all platform services: 25% discount for 1K+ tokens, 50% discount for 10K+ tokens.</p>
+                </div>
+                
+                <div class="utility-card">
+                    <h4>Yield Boosting</h4>
+                    <p>Enhanced APY in select vaults for FLOW holders. Boost multiplier ranges from 1.1x to 2.0x based on token holdings and lock duration.</p>
+                </div>
+                
+                <div class="utility-card">
+                    <h4>Priority Access</h4>
+                    <p>Early access to new strategies, beta features, and exclusive investment opportunities. Premium support and advanced analytics included.</p>
+                </div>
+                
+                <div class="utility-card">
+                    <h4>Liquidity Mining</h4>
+                    <p>Provide FLOW liquidity on DEXs to earn additional rewards. LP rewards complement protocol revenue sharing for maximized returns.</p>
+                </div>
+            </div>
+            
+            <h2>Economic Incentives</h2>
+            
+            <h3>Value Accrual Mechanisms</h3>
+            <ul>
+                <li><strong>Revenue Sharing:</strong> Direct distribution of 50% protocol fees to token holders</li>
+                <li><strong>Buyback Program:</strong> Excess treasury funds used for token buybacks and burns</li>
+                <li><strong>Utility Demand:</strong> Token required for fee discounts and yield enhancement</li>
+                <li><strong>Governance Premium:</strong> Voting rights valuable for protocol direction</li>
+            </ul>
+            
+            <h3>Supply Management</h3>
+            <div class="highlight-box">
+                <h4>Deflationary Pressure</h4>
+                <p>HyperFlow implements multiple deflationary mechanisms including revenue buybacks, governance fee burns, and optional staking lock periods. These reduce circulating supply while increasing utility demand.</p>
+            </div>
+            
+            <h2>Token Launch Strategy</h2>
+            
+            <h3>Fair Launch Approach</h3>
+            <ul>
+                <li><strong>Democratic Access:</strong> No private sales or tier discrimination</li>
+                <li><strong>Community First:</strong> 40% public allocation ensures broad distribution</li>
+                <li><strong>Transparent Pricing:</strong> Single price for all participants</li>
+                <li><strong>Immediate Utility:</strong> Full platform access from day one</li>
+            </ul>
+            
+            <h3>Post-Launch Growth</h3>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value">Phase 1</div>
+                    <div class="stat-label">Core Features</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">Phase 2</div>
+                    <div class="stat-label">Advanced Strategies</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">Phase 3</div>
+                    <div class="stat-label">Ecosystem Expansion</div>
+                </div>
+            </div>
+            
+            <h2>Risk Management</h2>
+            
+            <h3>Economic Security</h3>
+            <ul>
+                <li><strong>Diversified Revenue:</strong> Multiple income streams reduce dependency risk</li>
+                <li><strong>Treasury Management:</strong> Conservative allocation with emergency reserves</li>
+                <li><strong>Gradual Unlock:</strong> Team and development vesting prevents market dumps</li>
+                <li><strong>Community Governance:</strong> Decentralized decision-making for protocol health</li>
+            </ul>
         </div>
-    </div>
-    
-    <div style="text-align: center; margin: 20px 0; color: #64748b; font-size: 0.85rem;">
-        hyperflowprotocol.github.io
+        
+        <div style="text-align: center; margin: 30px 0; padding: 20px; background: rgba(30, 41, 59, 0.5); border-radius: 12px; border: 1px solid rgba(45, 212, 191, 0.1);">
+            <p style="color: #94a3b8; font-size: 0.9rem; margin-bottom: 15px;">
+                Explore Complete Documentation
+            </p>
+            <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                <a href="https://hyperflowprotocol.github.io" style="color: #2dd4bf;">Main Whitepaper</a>
+                <a href="https://hyperflowprotocol.github.io/hyperflow-summary" style="color: #2dd4bf;">Project Summary</a>
+                <a href="https://hyperflowprotocol.github.io/hyperflow-architecture" style="color: #2dd4bf;">Architecture</a>
+                <a href="https://hyperflowprotocol.github.io/hyperflow-presale" style="color: #2dd4bf;">Presale</a>
+                <a href="https://hyperflowprotocol.github.io/hyperflow-utility" style="color: #2dd4bf;">Utility</a>
+                <a href="https://hyperflowprotocol.github.io/hyperflow-roadmap" style="color: #2dd4bf;">Roadmap</a>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin: 20px 0; color: #64748b; font-size: 0.85rem;">
+            HyperFlow Protocol • Advanced Token Economics for DeFi Infrastructure
+        </div>
     </div>
 </body>
 </html>
