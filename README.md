@@ -25,15 +25,15 @@ The total supply of 1,000,000,000 FLOW tokens is distributed across five key cat
 ## Revenue Model & Value Accrual
 
 ### Protocol Revenue Sources
-HyperFlow Protocol generates sustainable revenue through multiple streams, with 70% of all revenue distributed to FLOW token stakers.
+HyperFlow Protocol is designed to generate sustainable revenue through multiple streams post-launch, with 70% of all revenue distributed to FLOW token stakers.
 
-| Revenue Source | Fee Rate | Annual Projection | Staker Distribution |
+| Revenue Source | Fee Rate | Revenue Model | Staker Distribution |
 |----------------|----------|-------------------|-------------------|
-| Cross-Chain Bridge Fees | 0.1% per transfer | $2M - $10M | 70% |
-| Vault Performance Fees | 10% of generated yield | $5M - $25M | 70% |
-| Governance Proposal Fees | 1,000 FLOW per proposal | $100K - $500K | 70% |
-| Premium Services | $50-$500/month subscriptions | $1M - $5M | 70% |
-| MEV Capture | Variable extraction rate | $2M - $15M | 70% |
+| Cross-Chain Bridge Fees | 0.1% per transfer | Variable based on adoption | 70% |
+| Vault Performance Fees | 10% of generated yield | Performance-dependent | 70% |
+| Governance Proposal Fees | 1,000 FLOW per proposal | Activity-based | 70% |
+| Premium Services | $50-$500/month subscriptions | Subscription-dependent | 70% |
+| MEV Capture | Variable extraction rate | Market-dependent | 70% |
 
 ## Staking & Reward Mechanism
 
