@@ -13,56 +13,75 @@
         
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #0a0f1c;
+            background: linear-gradient(135deg, #0a0f1c 0%, #0f1419 50%, #0a0f1c 100%);
             color: #e2e8f0;
             line-height: 1.6;
+            min-height: 100vh;
         }
         
         .container {
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 40px 20px;
         }
         
         .header {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 50px;
         }
         
         .back-link {
             display: inline-block;
-            background: rgba(0, 212, 255, 0.1);
-            color: #00d4ff;
-            padding: 10px 20px;
-            border-radius: 6px;
+            background: linear-gradient(135deg, #00d4ff 0%, #0ea5e9 100%);
+            color: #ffffff;
+            padding: 12px 24px;
+            border-radius: 8px;
             text-decoration: none;
             margin-bottom: 30px;
             transition: all 0.3s ease;
+            font-weight: 500;
+            box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
         }
         
         .back-link:hover {
-            background: rgba(0, 212, 255, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 212, 255, 0.4);
         }
         
         h1 {
-            color: #00d4ff;
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 10px;
+            background: linear-gradient(135deg, #00d4ff 0%, #22d3ee 50%, #06b6d4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        
+        .subtitle {
+            color: #94a3b8;
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            text-align: center;
         }
         
         .content {
-            background: rgba(15, 25, 45, 0.6);
-            border: 1px solid rgba(0, 212, 255, 0.2);
-            border-radius: 12px;
-            padding: 40px;
-            backdrop-filter: blur(10px);
+            background: rgba(15, 25, 45, 0.8);
+            border: 1px solid rgba(0, 212, 255, 0.15);
+            border-radius: 16px;
+            padding: 50px;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
         }
         
         h2 {
             color: #00d4ff;
-            font-size: 1.6rem;
-            margin: 30px 0 20px 0;
+            font-size: 2rem;
+            font-weight: 700;
+            margin: 40px 0 25px 0;
+            border-bottom: 2px solid rgba(0, 212, 255, 0.3);
+            padding-bottom: 10px;
         }
         
         h2:first-child {
@@ -70,62 +89,72 @@
         }
         
         h3 {
-            color: #00d4ff;
-            font-size: 1.3rem;
-            margin: 25px 0 15px 0;
+            color: #22d3ee;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 30px 0 20px 0;
         }
         
         h4 {
-            color: #00d4ff;
-            font-size: 1.1rem;
-            margin: 20px 0 10px 0;
+            color: #06b6d4;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 25px 0 15px 0;
         }
         
         p {
             color: #cbd5e1;
             margin-bottom: 20px;
+            font-size: 1.05rem;
+            line-height: 1.7;
         }
         
         ul {
-            margin: 15px 0 15px 25px;
+            margin: 20px 0 20px 30px;
         }
         
         li {
             color: #cbd5e1;
-            margin-bottom: 8px;
+            margin-bottom: 12px;
+            font-size: 1.05rem;
+            line-height: 1.6;
         }
         
         strong {
             color: #00d4ff;
+            font-weight: 600;
         }
         
         .table-container {
             overflow-x: auto;
-            border-radius: 8px;
-            border: 1px solid rgba(0, 212, 255, 0.3);
-            margin: 20px 0;
+            border-radius: 12px;
+            border: 1px solid rgba(0, 212, 255, 0.25);
+            margin: 30px 0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
         
         table {
             width: 100%;
             border-collapse: collapse;
-            background: rgba(10, 15, 28, 0.8);
+            background: rgba(10, 15, 28, 0.9);
         }
         
         th {
-            background: rgba(0, 212, 255, 0.2);
-            color: #00d4ff;
-            padding: 12px 15px;
+            background: linear-gradient(135deg, #00d4ff 0%, #0ea5e9 100%);
+            color: #ffffff;
+            padding: 16px 20px;
             text-align: left;
             font-weight: 600;
-            font-size: 0.9rem;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
         
         td {
-            padding: 10px 15px;
+            padding: 14px 20px;
             border-bottom: 1px solid rgba(0, 212, 255, 0.1);
             color: #e2e8f0;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
         }
         
         tr:last-child td {
@@ -133,36 +162,149 @@
         }
         
         tr:hover {
-            background: rgba(0, 212, 255, 0.03);
+            background: rgba(0, 212, 255, 0.05);
+        }
+        
+        tr:nth-child(even) {
+            background: rgba(15, 25, 45, 0.3);
         }
         
         .highlight-section {
-            background: rgba(0, 212, 255, 0.08);
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.08) 0%, rgba(34, 211, 238, 0.05) 100%);
             border: 1px solid rgba(0, 212, 255, 0.2);
-            border-radius: 8px;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 30px 0;
+            position: relative;
+        }
+        
+        .highlight-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #00d4ff 0%, #22d3ee 50%, #06b6d4 100%);
+            border-radius: 12px 12px 0 0;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .stat-item {
+            background: linear-gradient(135deg, rgba(0, 212, 255, 0.1) 0%, rgba(34, 211, 238, 0.05) 100%);
+            border: 1px solid rgba(0, 212, 255, 0.2);
+            border-radius: 12px;
+            padding: 25px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .stat-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 212, 255, 0.15);
+        }
+        
+        .stat-value {
+            display: block;
+            font-size: 2.2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #00d4ff 0%, #22d3ee 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 500;
+        }
+        
+        .feature-card {
+            background: rgba(15, 25, 45, 0.6);
+            border: 1px solid rgba(34, 211, 238, 0.2);
+            border-radius: 10px;
             padding: 25px;
             margin: 20px 0;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            border-color: rgba(0, 212, 255, 0.4);
+            transform: translateX(5px);
+        }
+        
+        .feature-card h4 {
+            color: #22d3ee;
+            margin-bottom: 15px;
+        }
+        
+        hr {
+            margin: 50px 0;
+            border: none;
+            height: 2px;
+            background: linear-gradient(90deg, transparent 0%, #00d4ff 50%, transparent 100%);
+        }
+        
+        .footer-link {
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        .footer-link a {
+            color: #00d4ff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-link a:hover {
+            color: #22d3ee;
+            text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
         }
         
         @media (max-width: 768px) {
             .container {
-                padding: 20px 15px;
+                padding: 25px 15px;
             }
             
             .content {
-                padding: 25px;
+                padding: 30px 25px;
             }
             
             h1 {
-                font-size: 2rem;
+                font-size: 2.2rem;
+            }
+            
+            h2 {
+                font-size: 1.6rem;
             }
             
             table {
-                font-size: 0.8rem;
+                font-size: 0.85rem;
             }
             
             th, td {
-                padding: 8px 10px;
+                padding: 10px 12px;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+                gap: 15px;
+            }
+            
+            .stat-value {
+                font-size: 1.8rem;
             }
         }
     </style>
@@ -172,18 +314,34 @@
         <div class="header">
             <a href="https://clockerwork02.github.io" class="back-link">← Back to Main Whitepaper</a>
             <h1>Token Economics</h1>
+            <div class="subtitle">HyperFlow Protocol - Advanced DeFi Infrastructure</div>
         </div>
         
         <div class="content">
             
-<h2>Token Economics</h2>
+<h2>Token Economics Overview</h2>
 
-<h3>FLOW Token Overview</h3>
-<p><strong>Symbol:</strong> FLOW</p>
-<p><strong>Total Supply:</strong> 1,000,000,000 FLOW (fixed, no inflation)</p>
-<p><strong>Standard:</strong> ERC-20 on HyperEVM</p>
+<div class="stats-grid">
+    <div class="stat-item">
+        <span class="stat-value">1B</span>
+        <span class="stat-label">Total Supply</span>
+    </div>
+    <div class="stat-item">
+        <span class="stat-value">FLOW</span>
+        <span class="stat-label">Token Symbol</span>
+    </div>
+    <div class="stat-item">
+        <span class="stat-value">70%</span>
+        <span class="stat-label">Revenue Share</span>
+    </div>
+    <div class="stat-item">
+        <span class="stat-value">ERC-20</span>
+        <span class="stat-label">Standard</span>
+    </div>
+</div>
 
-<h3>Distribution Model</h3>
+<h3>FLOW Token Distribution</h3>
+<p>The total supply of 1,000,000,000 FLOW tokens is distributed across five key categories to ensure balanced ecosystem development, community participation, and long-term sustainability.</p>
 
 <div class="table-container">
     <table>
@@ -191,46 +349,57 @@
             <tr>
                 <th>Allocation</th>
                 <th>Percentage</th>
-                <th>Amount</th>
+                <th>Token Amount</th>
+                <th>Purpose</th>
                 <th>Vesting Schedule</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>Public Sale</td>
+                <td><strong>Public Sale</strong></td>
                 <td>40%</td>
-                <td>400M FLOW</td>
-                <td>Immediate unlock</td>
+                <td>400,000,000 FLOW</td>
+                <td>Community distribution and liquidity</td>
+                <td>Immediate availability</td>
             </tr>
             <tr>
-                <td>Development Fund</td>
+                <td><strong>Development Fund</strong></td>
                 <td>25%</td>
-                <td>250M FLOW</td>
+                <td>250,000,000 FLOW</td>
+                <td>Protocol development and upgrades</td>
                 <td>4-year linear vesting</td>
             </tr>
             <tr>
-                <td>Community Rewards</td>
+                <td><strong>Community Rewards</strong></td>
                 <td>20%</td>
-                <td>200M FLOW</td>
-                <td>Yield farming distribution</td>
+                <td>200,000,000 FLOW</td>
+                <td>Yield farming and ecosystem incentives</td>
+                <td>5-year emission schedule</td>
             </tr>
             <tr>
-                <td>Team Allocation</td>
+                <td><strong>Team Allocation</strong></td>
                 <td>10%</td>
-                <td>100M FLOW</td>
+                <td>100,000,000 FLOW</td>
+                <td>Core team compensation</td>
                 <td>2-year cliff, 4-year vesting</td>
             </tr>
             <tr>
-                <td>Strategic Partnerships</td>
+                <td><strong>Strategic Partnerships</strong></td>
                 <td>5%</td>
-                <td>50M FLOW</td>
-                <td>Performance-based unlock</td>
+                <td>50,000,000 FLOW</td>
+                <td>Strategic integrations and collaborations</td>
+                <td>1-year cliff, 3-year vesting</td>
             </tr>
         </tbody>
     </table>
 </div>
 
-<h3>Revenue Distribution</h3>
+<h3>Revenue Distribution Model</h3>
+
+<div class="highlight-section">
+    <h4>Community-First Revenue Sharing</h4>
+    <p>HyperFlow Protocol implements an industry-leading revenue distribution model that prioritizes token holders with 70% of all protocol revenue, ensuring sustainable value creation for the community.</p>
+</div>
 
 <div class="table-container">
     <table>
@@ -239,35 +408,80 @@
                 <th>Recipient</th>
                 <th>Percentage</th>
                 <th>Purpose</th>
+                <th>Distribution Method</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>Token Holders</td>
+                <td><strong>Token Holders</strong></td>
                 <td>70%</td>
                 <td>Staking rewards distribution</td>
+                <td>Proportional to staked FLOW</td>
             </tr>
             <tr>
-                <td>Development Fund</td>
+                <td><strong>Development Fund</strong></td>
                 <td>20%</td>
-                <td>Protocol improvements</td>
+                <td>Protocol improvements and security</td>
+                <td>Governance-controlled allocation</td>
             </tr>
             <tr>
-                <td>Treasury Reserve</td>
+                <td><strong>Treasury Reserve</strong></td>
                 <td>10%</td>
-                <td>Emergency fund and growth</td>
+                <td>Emergency fund and ecosystem growth</td>
+                <td>Multi-signature wallet storage</td>
             </tr>
         </tbody>
     </table>
 </div>
 
-<h3>Utility Mechanisms</h3>
+<h3>Revenue Sources & Projections</h3>
 
-<div class="highlight-section">
-    <p>The FLOW token provides comprehensive utility across the protocol ecosystem through governance rights, revenue sharing, yield enhancement, fee discounts, priority access, and collateral usage.</p>
+<div class="table-container">
+    <table>
+        <thead>
+            <tr>
+                <th>Revenue Source</th>
+                <th>Fee Rate</th>
+                <th>Distribution to FLOW Holders</th>
+                <th>Target Volume</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Cross-Chain Bridge Fees</td>
+                <td>0.1%</td>
+                <td>70%</td>
+                <td>High volume transfers</td>
+            </tr>
+            <tr>
+                <td>Vault Performance Fees</td>
+                <td>10% of yield</td>
+                <td>70%</td>
+                <td>Optimized strategies</td>
+            </tr>
+            <tr>
+                <td>Governance Proposal Fees</td>
+                <td>Small anti-spam fee</td>
+                <td>70%</td>
+                <td>Active governance</td>
+            </tr>
+            <tr>
+                <td>Premium Features</td>
+                <td>Monthly/Annual subscriptions</td>
+                <td>70%</td>
+                <td>Professional users</td>
+            </tr>
+            <tr>
+                <td>MEV Capture & Redistribution</td>
+                <td>Variable capture rate</td>
+                <td>70%</td>
+                <td>Trading volume growth</td>
+            </tr>
+        </tbody>
+    </table>
 </div>
 
-<h2>Competitive Analysis</h2>
+<h3>Competitive Analysis</h3>
 
 <div class="table-container">
     <table>
@@ -277,51 +491,81 @@
                 <th>HyperFlow</th>
                 <th>Yearn Finance</th>
                 <th>Convex Finance</th>
+                <th>Compound</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>Revenue Share</td>
-                <td>70%</td>
+                <td><strong>Revenue Share</strong></td>
+                <td style="color: #00d4ff;">70%</td>
                 <td>30%</td>
                 <td>50%</td>
+                <td>0%</td>
             </tr>
             <tr>
-                <td>Native Integration</td>
-                <td>✓ HyperCore</td>
+                <td><strong>Native Integration</strong></td>
+                <td style="color: #00d4ff;">✓ HyperCore</td>
+                <td>✗</td>
                 <td>✗</td>
                 <td>✗</td>
             </tr>
             <tr>
-                <td>Cross-Chain</td>
-                <td>✓ Multi-chain</td>
+                <td><strong>Cross-Chain Support</strong></td>
+                <td style="color: #00d4ff;">✓ Multi-chain</td>
                 <td>Limited</td>
                 <td>Ethereum only</td>
+                <td>Multi-chain</td>
             </tr>
             <tr>
-                <td>Governance</td>
-                <td>✓ Full DAO</td>
+                <td><strong>Governance Model</strong></td>
+                <td style="color: #00d4ff;">✓ Full DAO</td>
                 <td>✓ YFI holders</td>
                 <td>✓ CVX holders</td>
+                <td>✓ COMP holders</td>
+            </tr>
+            <tr>
+                <td><strong>Yield Optimization</strong></td>
+                <td style="color: #00d4ff;">✓ AI-powered</td>
+                <td>Manual strategies</td>
+                <td>Curve-focused</td>
+                <td>Lending-focused</td>
             </tr>
         </tbody>
     </table>
 </div>
 
-<p style="text-align: center; margin-top: 40px; color: #94a3b8;">
-    <strong>Comprehensive tokenomics designed for sustainable value creation and community governance</strong>
-</p>
+<h3>Token Economics & Scarcity Mechanisms</h3>
 
-<hr style="margin: 40px 0; border: none; border-top: 1px solid rgba(0, 212, 255, 0.2);">
+<div class="feature-card">
+    <h4>Fixed Supply Management</h4>
+    <p><strong>1,000,000,000 FLOW tokens</strong> with no inflation or additional token creation, ensuring long-term scarcity and value preservation.</p>
+</div>
 
-<p style="text-align: center; color: #64748b;">
-    <strong>For complete protocol details: <a href="https://clockerwork02.github.io" style="color: #00d4ff;">HyperFlow Protocol Whitepaper</a></strong>
-</p>
+<div class="feature-card">
+    <h4>Quarterly Fee Burns</h4>
+    <p>Community governance can vote to burn tokens from protocol revenue, reducing circulating supply and increasing scarcity over time.</p>
+</div>
+
+<div class="feature-card">
+    <h4>Long-term Staking Incentives</h4>
+    <p>Extended staking periods reduce circulating supply while providing enhanced rewards and governance participation benefits.</p>
+</div>
+
+<div class="feature-card">
+    <h4>Utility-Driven Demand</h4>
+    <p>Increasing protocol usage drives continuous token demand for governance, fee discounts, yield enhancement, and ecosystem access.</p>
+</div>
+
+<hr>
+
+<div class="footer-link">
+    <p><strong>For complete protocol details: <a href="https://clockerwork02.github.io">HyperFlow Protocol Whitepaper</a></strong></p>
+</div>
 
         </div>
     </div>
     
-    <div style="text-align: center; margin: 20px 0; color: #64748b; font-size: 0.9rem;">
+    <div style="text-align: center; margin: 30px 0; color: #64748b; font-size: 0.9rem;">
         clockerwork02.github.io
     </div>
 </body>
