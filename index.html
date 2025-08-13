@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Token Economics - HyperFlow Protocol</title>
-    <!-- Whitepaper Consistent: 1755083165849 -->
+    <!-- Realistic Documentation: 1755083384776 -->
     <style>
         * {
             margin: 0;
@@ -231,6 +231,24 @@
             font-weight: 500;
         }
         
+        .warning-box {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .warning-box h4 {
+            color: #ef4444;
+            margin-bottom: 10px;
+        }
+        
+        .warning-box p {
+            color: #fca5a5;
+            font-size: 0.95rem;
+        }
+        
         a {
             color: #2dd4bf;
             text-decoration: none;
@@ -264,7 +282,12 @@
         
         <div class="content">
             
-<h2>Token Economics Overview</h2>
+<h2>Token Economics Analysis</h2>
+
+<div class="warning-box">
+    <h4>Financial Risk Warning</h4>
+    <p><strong>All financial projections are speculative estimates based on assumptions that may not materialize.</strong> Token value may decrease to zero. Only invest what you can afford to lose entirely.</p>
+</div>
 
 <div class="stats-grid">
     <div class="stat-item">
@@ -276,17 +299,16 @@
         <span class="stat-label">Token Symbol</span>
     </div>
     <div class="stat-item">
-        <span class="stat-value">70%</span>
-        <span class="stat-label">Revenue Share</span>
+        <span class="stat-value">50%</span>
+        <span class="stat-label">Revenue Share Target</span>
     </div>
     <div class="stat-item">
-        <span class="stat-value">ERC-20</span>
-        <span class="stat-label">Standard</span>
+        <span class="stat-value">Fixed</span>
+        <span class="stat-label">No Inflation</span>
     </div>
 </div>
 
-<h3>FLOW Token Distribution</h3>
-<p>The total supply of 100,000,000 FLOW tokens is distributed across five key categories to ensure balanced ecosystem development, community participation, and long-term sustainability.</p>
+<h3>Realistic Token Distribution</h3>
 
 <div class="table-container">
     <table>
@@ -294,103 +316,136 @@
             <tr>
                 <th>Allocation</th>
                 <th>Percentage</th>
-                <th>Token Amount</th>
+                <th>Amount</th>
+                <th>Vesting Period</th>
                 <th>Purpose</th>
-                <th>Vesting Schedule</th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td><strong>Public Sale</strong></td>
-                <td>50%</td>
-                <td>50,000,000 FLOW</td>
-                <td>Fair launch at 25,000 FLOW per 1 HYPE</td>
-                <td>Immediate unlock at launch</td>
+                <td>35%</td>
+                <td>35,000,000 FLOW</td>
+                <td>Immediate</td>
+                <td>Community distribution</td>
             </tr>
             <tr>
-                <td><strong>Community Airdrop</strong></td>
-                <td>5%</td>
-                <td>5,000,000 FLOW</td>
-                <td>Early adopters and ecosystem participants</td>
-                <td>Immediate distribution</td>
-            </tr>
-            <tr>
-                <td><strong>Liquidity Mining</strong></td>
-                <td>3%</td>
-                <td>3,000,000 FLOW</td>
-                <td>DEX and cross-protocol incentives</td>
-                <td>Gradual release over 2 years</td>
-            </tr>
-            <tr>
-                <td><strong>Development Fund</strong></td>
+                <td><strong>Development</strong></td>
                 <td>25%</td>
                 <td>25,000,000 FLOW</td>
-                <td>Protocol development and operations</td>
-                <td>4-year linear vesting</td>
+                <td>4-year linear</td>
+                <td>Protocol development</td>
             </tr>
             <tr>
-                <td><strong>Team Allocation</strong></td>
+                <td><strong>Team & Advisors</strong></td>
+                <td>15%</td>
+                <td>15,000,000 FLOW</td>
+                <td>2-year cliff, 4-year linear</td>
+                <td>Team compensation</td>
+            </tr>
+            <tr>
+                <td><strong>Ecosystem Fund</strong></td>
+                <td>15%</td>
+                <td>15,000,000 FLOW</td>
+                <td>6-month cliff, 3-year linear</td>
+                <td>Partnerships & growth</td>
+            </tr>
+            <tr>
+                <td><strong>Liquidity Incentives</strong></td>
                 <td>10%</td>
                 <td>10,000,000 FLOW</td>
-                <td>Core team and advisors</td>
-                <td>2-year cliff, 4-year vesting</td>
-            </tr>
-            <tr>
-                <td><strong>Treasury & Growth</strong></td>
-                <td>5%</td>
-                <td>5,000,000 FLOW</td>
-                <td>Ecosystem grants and emergency fund</td>
-                <td>Governance-controlled</td>
-            </tr>
-            <tr>
-                <td><strong>Yield Farming</strong></td>
-                <td>2%</td>
-                <td>2,000,000 FLOW</td>
-                <td>Early farming rewards</td>
-                <td>6-month distribution</td>
+                <td>12-month emission</td>
+                <td>Bootstrap liquidity</td>
             </tr>
         </tbody>
     </table>
 </div>
 
-<h3>Revenue Distribution Model</h3>
+<h3>Revenue Model Analysis</h3>
 
 <div class="highlight-section">
-    <h4>Community-First Revenue Sharing</h4>
-    <p>HyperFlow Protocol implements an industry-leading revenue distribution model that prioritizes token holders with 70% of all protocol revenue, ensuring sustainable value creation for the community.</p>
+    <h4>Revenue Streams (Projected)</h4>
+    <ul>
+        <li><strong>Vault Performance Fees:</strong> 10-15% of generated yield</li>
+        <li><strong>Withdrawal Fees:</strong> 0.1-0.5% on withdrawals</li>
+        <li><strong>Premium Features:</strong> Subscription-based advanced tools</li>
+        <li><strong>Partner Protocol Rewards:</strong> Revenue sharing agreements</li>
+    </ul>
 </div>
 
 <div class="table-container">
     <table>
         <thead>
             <tr>
-                <th>Recipient</th>
-                <th>Percentage</th>
-                <th>Purpose</th>
-                <th>Distribution Method</th>
+                <th>TVL Scenario</th>
+                <th>Annual Revenue Estimate</th>
+                <th>Token Holder Share (50%)</th>
+                <th>Yield per Token*</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td><strong>Token Holders</strong></td>
-                <td>70%</td>
-                <td>Staking rewards distribution</td>
-                <td>Proportional to staked FLOW</td>
+                <td><strong>$1M TVL</strong></td>
+                <td>$50,000 - $100,000</td>
+                <td>$25,000 - $50,000</td>
+                <td>0.05% - 0.1%</td>
             </tr>
             <tr>
-                <td><strong>Development Fund</strong></td>
-                <td>20%</td>
-                <td>Protocol improvements and security</td>
-                <td>Governance-controlled allocation</td>
+                <td><strong>$5M TVL</strong></td>
+                <td>$250,000 - $500,000</td>
+                <td>$125,000 - $250,000</td>
+                <td>0.25% - 0.5%</td>
             </tr>
             <tr>
-                <td><strong>Treasury Reserve</strong></td>
-                <td>10%</td>
-                <td>Emergency fund and ecosystem growth</td>
-                <td>Multi-signature wallet storage</td>
+                <td><strong>$25M TVL</strong></td>
+                <td>$1.25M - $2.5M</td>
+                <td>$625,000 - $1.25M</td>
+                <td>1.25% - 2.5%</td>
+            </tr>
+            <tr>
+                <td><strong>$100M TVL</strong></td>
+                <td>$5M - $10M</td>
+                <td>$2.5M - $5M</td>
+                <td>5% - 10%</td>
             </tr>
         </tbody>
     </table>
+</div>
+
+<p style="font-size: 0.9rem; color: #94a3b8;">*Yield calculations assume 50M tokens in circulation and equal distribution to all staked tokens. Actual yields will vary based on staking participation rates.</p>
+
+<h3>Token Utility Framework</h3>
+
+<div class="stats-grid">
+    <div class="stat-item">
+        <span class="stat-value">Governance</span>
+        <span class="stat-label">Protocol Decisions</span>
+    </div>
+    <div class="stat-item">
+        <span class="stat-value">Revenue</span>
+        <span class="stat-label">Sharing Rights</span>
+    </div>
+    <div class="stat-item">
+        <span class="stat-value">Fee</span>
+        <span class="stat-label">Discounts</span>
+    </div>
+    <div class="stat-item">
+        <span class="stat-value">Priority</span>
+        <span class="stat-label">Access</span>
+    </div>
+</div>
+
+<h4>Utility Mechanisms</h4>
+<ul>
+    <li><strong>Staking Rewards:</strong> Share of protocol revenue distributed to stakers</li>
+    <li><strong>Governance Voting:</strong> Protocol parameter and upgrade decisions</li>
+    <li><strong>Fee Reduction:</strong> Lower fees for vault deposits/withdrawals</li>
+    <li><strong>Premium Access:</strong> Advanced analytics and early feature access</li>
+</ul>
+
+<div class="warning-box">
+    <h4>Economic Risks</h4>
+    <p>Token value depends on protocol adoption and revenue generation. Low TVL, competition, technical issues, or market downturns could significantly impact token economics and reduce or eliminate rewards.</p>
 </div>
 
 <div style="text-align: center; margin-top: 40px;">
