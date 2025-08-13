@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HyperFlow Protocol - Tokenomics</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Token Economics - HyperFlow Protocol</title>
     <style>
         * {
             margin: 0;
@@ -13,93 +12,79 @@
         }
         
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background: #0a0f1c;
             color: #e2e8f0;
             line-height: 1.6;
-            padding: 20px;
-            min-height: 100vh;
         }
         
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
+            padding: 40px 20px;
         }
         
         .header {
             text-align: center;
             margin-bottom: 40px;
-            padding-bottom: 30px;
-            border-bottom: 1px solid rgba(0, 212, 255, 0.2);
-        }
-        
-        h1 {
-            color: #00d4ff;
-            font-size: 2.2rem;
-            font-weight: 700;
-            margin-bottom: 10px;
         }
         
         .back-link {
             display: inline-block;
-            margin-bottom: 20px;
+            background: rgba(0, 212, 255, 0.1);
             color: #00d4ff;
-            text-decoration: none;
-            font-weight: 500;
             padding: 10px 20px;
-            border: 1px solid #00d4ff;
-            border-radius: 8px;
+            border-radius: 6px;
+            text-decoration: none;
+            margin-bottom: 30px;
             transition: all 0.3s ease;
         }
         
         .back-link:hover {
-            background: #0a0f1c;
-            color: #0f1419;
+            background: rgba(0, 212, 255, 0.2);
+            transform: translateY(-2px);
+        }
+        
+        h1 {
+            color: #00d4ff;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
         }
         
         .content {
-            background: linear-gradient(135deg, rgba(15, 25, 45, 0.6) 0%, rgba(15, 25, 45, 0.6) 100%);
+            background: rgba(15, 25, 45, 0.6);
             border: 1px solid rgba(0, 212, 255, 0.2);
-            border-radius: 16px;
+            border-radius: 12px;
             padding: 40px;
             backdrop-filter: blur(10px);
         }
         
-        .content h1 {
-            color: #00d4ff;
-            font-size: 1.8rem;
-            margin: 0 0 20px 0;
-            text-align: left;
-        }
-        
         .content h2 {
             color: #00d4ff;
-            font-size: 1.5rem;
-            margin: 30px 0 15px 0;
-            border-bottom: 1px solid rgba(0, 212, 255, 0.3);
-            padding-bottom: 10px;
+            font-size: 1.6rem;
+            margin: 30px 0 20px 0;
         }
         
-        .content h2:first-of-type {
+        .content h2:first-child {
             margin-top: 0;
         }
         
         .content h3 {
             color: #00d4ff;
-            font-size: 1.2rem;
-            margin: 25px 0 12px 0;
+            font-size: 1.3rem;
+            margin: 25px 0 15px 0;
         }
         
         .content h4 {
             color: #00d4ff;
-            font-size: 1rem;
-            margin: 20px 0 8px 0;
+            font-size: 1.1rem;
+            margin: 20px 0 10px 0;
         }
         
         .content p {
             color: #cbd5e1;
-            margin-bottom: 15px;
-            text-align: justify;
+            margin-bottom: 20px;
         }
         
         .content ul {
@@ -113,67 +98,35 @@
         
         .content strong {
             color: #00d4ff;
-            font-weight: 600;
-        }
-        
-        .token-stats {
-            background: rgba(0, 212, 255, 0.1);
-            border: 1px solid #00d4ff;
-            border-radius: 12px;
-            padding: 25px;
-            margin: 25px 0;
-            text-align: center;
-        }
-        
-        .stat-item {
-            display: inline-block;
-            margin: 10px 20px;
-            text-align: center;
-        }
-        
-        .stat-value {
-            display: block;
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: #00d4ff;
-            margin-bottom: 5px;
-        }
-        
-        .stat-label {
-            font-size: 0.9rem;
-            color: #94a3b8;
-            text-transform: uppercase;
-            letter-spacing: 1px;
         }
         
         .table-container {
             overflow-x: auto;
+            border-radius: 8px;
+            border: 1px solid rgba(0, 212, 255, 0.3);
             margin: 20px 0;
-            border-radius: 12px;
-            border: 1px solid rgba(0, 212, 255, 0.2);
         }
         
         table {
             width: 100%;
             border-collapse: collapse;
-            background: #0a0f1c;
-            min-width: 600px;
+            background: rgba(10, 15, 28, 0.8);
         }
         
         th {
-            background: linear-gradient(135deg, #00d4ff 0%, #00d4ff 100%);
-            color: white;
-            padding: 15px;
+            background: rgba(0, 212, 255, 0.2);
+            color: #00d4ff;
+            padding: 12px 15px;
             text-align: left;
             font-weight: 600;
-            font-size: 0.95rem;
-            white-space: nowrap;
+            font-size: 0.9rem;
         }
         
         td {
-            padding: 12px 15px;
-            border-bottom: 1px solid rgba(0, 212, 255, 0.2);
+            padding: 10px 15px;
+            border-bottom: 1px solid rgba(0, 212, 255, 0.1);
             color: #e2e8f0;
+            font-size: 0.9rem;
         }
         
         tr:last-child td {
@@ -181,82 +134,36 @@
         }
         
         tr:hover {
-            background: rgba(0, 212, 255, 0.05);
+            background: rgba(0, 212, 255, 0.03);
         }
         
-        .percentage {
-            color: #00d4ff;
-            font-weight: 600;
-        }
-        
-        .amount {
-            color: #00d4ff;
-            font-weight: 500;
-        }
-        
-        .highlight-box {
-            background: rgba(0, 212, 255, 0.1);
-            border: 1px solid #00d4ff;
-            border-radius: 12px;
-            padding: 20px;
-            margin: 20px 0;
-        }
-        
-        .highlight-box h4 {
-            color: #00d4ff;
-            margin-top: 0;
-        }
-        
-        .revenue-model {
-            background: rgba(251, 191, 36, 0.1);
-            border: 1px solid #f59e0b;
-            border-radius: 12px;
+        .highlight-section {
+            background: rgba(0, 212, 255, 0.08);
+            border: 1px solid rgba(0, 212, 255, 0.2);
+            border-radius: 8px;
             padding: 25px;
-            margin: 25px 0;
-        }
-        
-        .revenue-model h3 {
-            color: #f59e0b;
-            margin-top: 0;
-        }
-        
-        .vesting-schedule {
-            background: rgba(139, 92, 246, 0.1);
-            border: 1px solid #8b5cf6;
-            border-radius: 12px;
-            padding: 20px;
             margin: 20px 0;
         }
         
-        .vesting-schedule h4 {
-            color: #8b5cf6;
+        .highlight-section h3 {
             margin-top: 0;
         }
         
         @media (max-width: 768px) {
-            body {
-                padding: 15px;
+            .container {
+                padding: 20px 15px;
             }
             
             .content {
                 padding: 25px;
             }
             
-            .token-stats {
-                padding: 20px;
-            }
-            
-            .stat-item {
-                margin: 10px 10px;
-            }
-            
-            .stat-value {
-                font-size: 1.4rem;
+            h1 {
+                font-size: 2rem;
             }
             
             table {
                 font-size: 0.8rem;
-                min-width: 500px;
             }
             
             th, td {
@@ -269,413 +176,158 @@
     <div class="container">
         <div class="header">
             <a href="https://clockerwork02.github.io" class="back-link">← Back to Main Whitepaper</a>
-            <h1>HyperFlow Protocol - Tokenomics</h1>
+            <h1>Token Economics</h1>
         </div>
         
         <div class="content">
-            <h2>FLOW Token Overview</h2>
-            <p>The FLOW token serves as the native utility and governance token of the HyperFlow Protocol ecosystem. Designed with community governance principles and sustainable value accrual mechanisms, FLOW provides comprehensive utility across all protocol interactions while ensuring long-term ecosystem growth and stability.</p>
             
-            <div class="token-stats">
-                <div class="stat-item">
-                    <span class="stat-value">1B</span>
-                    <span class="stat-label">Total Supply</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-value">FLOW</span>
-                    <span class="stat-label">Token Symbol</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-value">HyperEVM</span>
-                    <span class="stat-label">Blockchain</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-value">ERC-20</span>
-                    <span class="stat-label">Standard</span>
-                </div>
-            </div>
-            
-            <h2>Token Distribution</h2>
-            <p>The total supply of 1,000,000,000 FLOW tokens is distributed across five key categories to ensure balanced ecosystem development, community participation, and long-term sustainability.</p>
-            
-            <div class="table-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Allocation</th>
-                            <th>Percentage</th>
-                            <th>Token Amount</th>
-                            <th>Purpose</th>
-                            <th>Vesting Schedule</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Public Sale</strong></td>
-                            <td class="percentage">40%</td>
-                            <td class="amount">400,000,000 FLOW</td>
-                            <td>Community distribution and liquidity</td>
-                            <td>Immediate availability</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Development Fund</strong></td>
-                            <td class="percentage">25%</td>
-                            <td class="amount">250,000,000 FLOW</td>
-                            <td>Protocol development and upgrades</td>
-                            <td>4-year linear vesting</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Community Rewards</strong></td>
-                            <td class="percentage">20%</td>
-                            <td class="amount">200,000,000 FLOW</td>
-                            <td>Yield farming and ecosystem incentives</td>
-                            <td>5-year emission schedule</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Team</strong></td>
-                            <td class="percentage">10%</td>
-                            <td class="amount">100,000,000 FLOW</td>
-                            <td>Core team compensation</td>
-                            <td>2-year cliff, 4-year vesting</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Partnerships</strong></td>
-                            <td class="percentage">5%</td>
-                            <td class="amount">50,000,000 FLOW</td>
-                            <td>Strategic integrations and collaborations</td>
-                            <td>1-year cliff, 3-year vesting</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            
-            <h2>Revenue Model & Value Accrual</h2>
-            
-            <div class="revenue-model">
-                <h3>Protocol Revenue Sources</h3>
-                <p>HyperFlow Protocol is designed to generate sustainable revenue through multiple streams post-launch, with 70% of all revenue distributed to FLOW token stakers.</p>
-                
-                <div class="table-container">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Revenue Source</th>
-                                <th>Fee Rate</th>
-                                <th>Revenue Model</th>
-                                <th>Staker Distribution</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Cross-Chain Bridge Fees</td>
-                                <td>0.1% per transfer</td>
-                                <td>Variable based on adoption</td>
-                                <td class="percentage">70%</td>
-                            </tr>
-                            <tr>
-                                <td>Vault Performance Fees</td>
-                                <td>10% of generated yield</td>
-                                <td>Performance-dependent</td>
-                                <td class="percentage">70%</td>
-                            </tr>
-                            <tr>
-                                <td>Governance Proposal Fees</td>
-                                <td>1,000 FLOW per proposal</td>
-                                <td>Activity-based</td>
-                                <td class="percentage">70%</td>
-                            </tr>
-                            <tr>
-                                <td>Premium Services</td>
-                                <td>$50-$500/month subscriptions</td>
-                                <td>Subscription-dependent</td>
-                                <td class="percentage">70%</td>
-                            </tr>
-                            <tr>
-                                <td>MEV Capture</td>
-                                <td>Variable extraction rate</td>
-                                <td>Market-dependent</td>
-                                <td class="percentage">70%</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-            
-            <h2>Staking & Reward Mechanism</h2>
-            
-            <div class="highlight-box">
-                <h4>Industry-Leading Revenue Sharing</h4>
-                <p>HyperFlow Protocol implements a 70% revenue sharing model for FLOW token stakers, significantly higher than the typical 20-30% offered by competing DeFi protocols. This community governance approach ensures that protocol success directly benefits token holders.</p>
-            </div>
-            
-            <h3>Staking Tiers & Benefits</h3>
-            <div class="table-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Staking Tier</th>
-                            <th>Minimum FLOW</th>
-                            <th>Revenue Share</th>
-                            <th>Additional Benefits</th>
-                            <th>Estimated APY</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Bronze</td>
-                            <td class="amount">1,000 FLOW</td>
-                            <td class="percentage">70%</td>
-                            <td>Basic staking rewards</td>
-                            <td class="percentage">25-40%</td>
-                        </tr>
-                        <tr>
-                            <td>Silver</td>
-                            <td class="amount">10,000 FLOW</td>
-                            <td class="percentage">70%</td>
-                            <td>Fee discounts + priority support</td>
-                            <td class="percentage">35-55%</td>
-                        </tr>
-                        <tr>
-                            <td>Gold</td>
-                            <td class="amount">50,000 FLOW</td>
-                            <td class="percentage">70%</td>
-                            <td>Yield multipliers + advanced analytics</td>
-                            <td class="percentage">50-75%</td>
-                        </tr>
-                        <tr>
-                            <td>Platinum</td>
-                            <td class="amount">100,000 FLOW</td>
-                            <td class="percentage">70%</td>
-                            <td>Maximum benefits + governance privileges</td>
-                            <td class="percentage">75-100%</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            
-            <h2>Vesting & Release Schedule</h2>
-            
-            <div class="vesting-schedule">
-                <h4>Team & Development Vesting</h4>
-                <ul>
-                    <li><strong>Team Tokens</strong>: 2-year cliff period followed by 4-year linear vesting (100M FLOW)</li>
-                    <li><strong>Development Fund</strong>: 4-year linear vesting starting immediately (250M FLOW)</li>
-                    <li><strong>Partnership Tokens</strong>: 1-year cliff followed by 3-year linear vesting (50M FLOW)</li>
-                    <li><strong>Community Rewards</strong>: 5-year emission schedule through yield farming programs (200M FLOW)</li>
-                </ul>
-            </div>
-            
-            <h3>Circulating Supply Timeline</h3>
-            <div class="table-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Timeline</th>
-                            <th>Public Sale</th>
-                            <th>Development</th>
-                            <th>Community</th>
-                            <th>Team</th>
-                            <th>Partnerships</th>
-                            <th>Total Circulating</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Launch</strong></td>
-                            <td class="amount">400M</td>
-                            <td class="amount">0</td>
-                            <td class="amount">40M</td>
-                            <td class="amount">0</td>
-                            <td class="amount">0</td>
-                            <td class="amount">440M FLOW</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Year 1</strong></td>
-                            <td class="amount">400M</td>
-                            <td class="amount">62.5M</td>
-                            <td class="amount">80M</td>
-                            <td class="amount">0</td>
-                            <td class="amount">0</td>
-                            <td class="amount">542.5M FLOW</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Year 2</strong></td>
-                            <td class="amount">400M</td>
-                            <td class="amount">125M</td>
-                            <td class="amount">120M</td>
-                            <td class="amount">0</td>
-                            <td class="amount">12.5M</td>
-                            <td class="amount">657.5M FLOW</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Year 3</strong></td>
-                            <td class="amount">400M</td>
-                            <td class="amount">187.5M</td>
-                            <td class="amount">160M</td>
-                            <td class="amount">25M</td>
-                            <td class="amount">29.2M</td>
-                            <td class="amount">801.7M FLOW</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Year 4+</strong></td>
-                            <td class="amount">400M</td>
-                            <td class="amount">250M</td>
-                            <td class="amount">200M</td>
-                            <td class="amount">100M</td>
-                            <td class="amount">50M</td>
-                            <td class="amount">1B FLOW</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            
-            <h2>Token Utility & Governance</h2>
-            
-            <h3>Core Utility Functions</h3>
-            <ul>
-                <li><strong>Governance Voting</strong>: 1 FLOW = 1 vote on all protocol decisions</li>
-                <li><strong>Revenue Sharing</strong>: 70% of protocol fees distributed to stakers</li>
-                <li><strong>Fee Discounts</strong>: Up to 50% reduction on platform fees</li>
-                <li><strong>Yield Enhancement</strong>: Access to premium strategies with multipliers up to 2x</li>
-                <li><strong>Liquidity Mining</strong>: Earn additional rewards for providing liquidity</li>
-                <li><strong>Cross-Protocol Benefits</strong>: Enhanced rewards on integrated HyperEVM protocols</li>
-            </ul>
-            
-            <h3>Governance Framework</h3>
-            <div class="highlight-box">
-                <h4>Community Governance Model</h4>
-                <p>HyperFlow Protocol implements a fair governance system where every FLOW token grants equal voting power, ensuring community representation without plutocratic concentration of power.</p>
-                <ul>
-                    <li><strong>Proposal Threshold</strong>: 10,000 FLOW minimum to submit governance proposals</li>
-                    <li><strong>Voting Period</strong>: 7-day voting window for all proposals</li>
-                    <li><strong>Quorum Requirements</strong>: Minimum 5% of circulating supply must participate</li>
-                    <li><strong>Implementation Delay</strong>: 48-hour timelock before execution</li>
-                </ul>
-            </div>
-            
-            <h2>Economic Incentives & Deflationary Mechanisms</h2>
-            
-            <h3>Supply Management</h3>
-            <ul>
-                <li><strong>Fixed Supply Cap</strong>: Maximum 1,000,000,000 FLOW tokens (no inflation)</li>
-                <li><strong>Fee Burn Mechanism</strong>: Optional quarterly token burns from protocol revenue</li>
-                <li><strong>Staking Lock-ups</strong>: Reduced circulating supply through long-term staking incentives</li>
-                <li><strong>Buyback Programs</strong>: Protocol treasury repurchases during high revenue periods</li>
-            </ul>
-            
-            <h3>Value Accrual Framework</h3>
-            <div class="table-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Mechanism</th>
-                            <th>Description</th>
-                            <th>Impact on Token Value</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Revenue Distribution</td>
-                            <td>70% of fees distributed to stakers</td>
-                            <td>Direct cash flow to holders</td>
-                        </tr>
-                        <tr>
-                            <td>Utility Expansion</td>
-                            <td>Increasing use cases and integrations</td>
-                            <td>Higher demand for token holding</td>
-                        </tr>
-                        <tr>
-                            <td>Network Effects</td>
-                            <td>More users increase protocol value</td>
-                            <td>Scaling returns for all participants</td>
-                        </tr>
-                        <tr>
-                            <td>Scarcity Mechanisms</td>
-                            <td>Burns and lock-ups reduce supply</td>
-                            <td>Supply/demand dynamics favor appreciation</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            
-            <h2>Risk Management & Security</h2>
-            
-            <h3>Economic Security Measures</h3>
-            <ul>
-                <li><strong>Gradual Token Release</strong>: Vesting schedules prevent sudden supply shocks</li>
-                <li><strong>Revenue Diversification</strong>: Multiple income streams reduce single-point risks</li>
-                <li><strong>Treasury Management</strong>: Conservative allocation of development funds</li>
-                <li><strong>Governance Safeguards</strong>: Timelock delays and emergency pause mechanisms</li>
-                <li><strong>Audit & Insurance</strong>: Comprehensive smart contract security measures</li>
-            </ul>
-            
-            <h2>Future Token Economics Evolution</h2>
-            
-            <h3>Planned Enhancements</h3>
-            <ul>
-                <li><strong>Cross-Chain Expansion</strong>: FLOW utility across multiple blockchain networks</li>
-                <li><strong>Real-World Asset Integration</strong>: Tokenization and yield from traditional assets</li>
-                <li><strong>Institutional Features</strong>: White-label solutions and enterprise integrations</li>
-                <li><strong>AI-Powered Optimization</strong>: Machine learning-enhanced yield strategies</li>
-                <li><strong>NFT Ecosystem</strong>: Utility NFTs providing additional benefits and governance rights</li>
-            </ul>
-            
-            <h2>Competitive Positioning</h2>
-            
-            <div class="table-container">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Metric</th>
-                            <th>HyperFlow FLOW</th>
-                            <th>Typical DeFi Token</th>
-                            <th>Advantage</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Revenue Sharing</td>
-                            <td class="percentage">70%</td>
-                            <td>20-30%</td>
-                            <td>2-3x higher distribution</td>
-                        </tr>
-                        <tr>
-                            <td>Governance Model</td>
-                            <td>1:1 voting ratio</td>
-                            <td>Often plutocratic</td>
-                            <td>True community representation</td>
-                        </tr>
-                        <tr>
-                            <td>Utility Breadth</td>
-                            <td>8+ distinct use cases</td>
-                            <td>2-3 basic functions</td>
-                            <td>Comprehensive ecosystem value</td>
-                        </tr>
-                        <tr>
-                            <td>Yield Enhancement</td>
-                            <td>Up to 2x multipliers</td>
-                            <td>Limited or none</td>
-                            <td>Direct yield benefits</td>
-                        </tr>
-                        <tr>
-                            <td>Cross-Protocol Benefits</td>
-                            <td>Ecosystem-wide rewards</td>
-                            <td>Single protocol focus</td>
-                            <td>Network effect amplification</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            
-            <h2>Conclusion</h2>
-            <p>The FLOW tokenomics model represents a balanced approach to sustainable value creation, combining community governance principles with robust economic incentives. The 1 billion token fixed supply, combined with 70% revenue sharing and comprehensive utility mechanisms, creates a compelling value proposition for long-term token holders.</p>
-            
-            <p>Through careful vesting schedules, multiple revenue streams, and continuous utility expansion, the FLOW token economics are designed to support the growth of the HyperFlow Protocol ecosystem while ensuring fair distribution and sustainable value accrual for all participants.</p>
-            
-            <hr style="margin: 40px 0; border: none; border-top: 1px solid rgba(0, 212, 255, 0.2);">
-            
-            <p style="text-align: center; color: #64748b;"><strong>For the complete protocol overview, please refer to the <a href="https://clockerwork02.github.io" style="color: #00d4ff;">HyperFlow Protocol Whitepaper</a>.</strong></p>
+<h2>Token Economics</h2>
+
+<h3>FLOW Token Overview</h3>
+<p><strong>Symbol:</strong> FLOW</p>
+<p><strong>Total Supply:</strong> 1,000,000,000 FLOW (fixed, no inflation)</p>
+<p><strong>Standard:</strong> ERC-20 on HyperEVM</p>
+
+<h3>Distribution Model</h3>
+
+<div class="table-container">
+    <table>
+        <thead>
+            <tr>
+                <th>Allocation</th>
+                <th>Percentage</th>
+                <th>Amount</th>
+                <th>Vesting Schedule</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Public Sale</td>
+                <td>40%</td>
+                <td>400M FLOW</td>
+                <td>Immediate unlock</td>
+            </tr>
+            <tr>
+                <td>Development Fund</td>
+                <td>25%</td>
+                <td>250M FLOW</td>
+                <td>4-year linear vesting</td>
+            </tr>
+            <tr>
+                <td>Community Rewards</td>
+                <td>20%</td>
+                <td>200M FLOW</td>
+                <td>Yield farming distribution</td>
+            </tr>
+            <tr>
+                <td>Team Allocation</td>
+                <td>10%</td>
+                <td>100M FLOW</td>
+                <td>2-year cliff, 4-year vesting</td>
+            </tr>
+            <tr>
+                <td>Strategic Partnerships</td>
+                <td>5%</td>
+                <td>50M FLOW</td>
+                <td>Performance-based unlock</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3>Revenue Distribution</h3>
+
+<div class="table-container">
+    <table>
+        <thead>
+            <tr>
+                <th>Recipient</th>
+                <th>Percentage</th>
+                <th>Purpose</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Token Holders</td>
+                <td>70%</td>
+                <td>Staking rewards distribution</td>
+            </tr>
+            <tr>
+                <td>Development Fund</td>
+                <td>20%</td>
+                <td>Protocol improvements</td>
+            </tr>
+            <tr>
+                <td>Treasury Reserve</td>
+                <td>10%</td>
+                <td>Emergency fund and growth</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<h3>Utility Mechanisms</h3>
+
+<div class="highlight-section">
+    <p>The FLOW token provides comprehensive utility across the protocol ecosystem through governance rights, revenue sharing, yield enhancement, fee discounts, priority access, and collateral usage.</p>
+</div>
+
+<h2>Competitive Analysis</h2>
+
+<div class="table-container">
+    <table>
+        <thead>
+            <tr>
+                <th>Feature</th>
+                <th>HyperFlow</th>
+                <th>Yearn Finance</th>
+                <th>Convex Finance</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Revenue Share</td>
+                <td>70%</td>
+                <td>30%</td>
+                <td>50%</td>
+            </tr>
+            <tr>
+                <td>Native HyperCore</td>
+                <td>✓ HyperCore</td>
+                <td>✗</td>
+                <td>✗</td>
+            </tr>
+            <tr>
+                <td>Cross-Chain</td>
+                <td>✓ Multi-chain</td>
+                <td>Limited</td>
+                <td>Ethereum only</td>
+            </tr>
+            <tr>
+                <td>Governance</td>
+                <td>✓ Full DAO</td>
+                <td>✓ YFI holders</td>
+                <td>✓ CVX holders</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<p style="text-align: center; margin-top: 40px; color: #94a3b8;">
+    <strong>Comprehensive tokenomics designed for sustainable value creation and community governance</strong>
+</p>
+
+<hr style="margin: 40px 0; border: none; border-top: 1px solid rgba(0, 212, 255, 0.2);">
+
+<p style="text-align: center; color: #64748b;">
+    <strong>For complete protocol details: <a href="https://clockerwork02.github.io" style="color: #00d4ff;">HyperFlow Protocol Whitepaper</a></strong>
+</p>
+
         </div>
+    </div>
+    
+    <div style="text-align: center; margin: 20px 0; color: #64748b; font-size: 0.9rem;">
+        clockerwork02.github.io
     </div>
 </body>
 </html>
